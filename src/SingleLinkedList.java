@@ -21,10 +21,16 @@ class LinkedList{
     }
 
     public void display(){
-        Node temp = head ;
-        while(temp!=null){
-            System.out.println(temp.data);
-            temp = temp.next;
+
+        if(head == null){
+            System.out.println("List empty");
+        }
+        else {
+            Node temp = head;
+            while (temp != null) {
+                System.out.println(temp.data);
+                temp = temp.next;
+            }
         }
     }
 
