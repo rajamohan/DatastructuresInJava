@@ -1,15 +1,15 @@
 class Node{
     int data;
-    Node next;
+    StackNode next;
     public Node(int data) {
         this.data = data;
     }
 }
 
 class LinkedList{
-    Node head, tail;
+    StackNode head, tail;
     public void insert(int data){
-        Node node = new Node(data); // Creating new node
+        StackNode node = new StackNode(data); // Creating new node
         node.next = null;
         if (head == null){ // For first node
             head = node;
@@ -26,7 +26,7 @@ class LinkedList{
             System.out.println("List empty");
         }
         else {
-            Node temp = head;
+            StackNode temp = head;
             while (temp != null) {
                 System.out.println(temp.data);
                 temp = temp.next;
@@ -35,14 +35,14 @@ class LinkedList{
     }
 
     public void inserAtBegining(int data){
-        Node node = new Node(data);
+        StackNode node = new StackNode(data);
         node.next = head;
         head = node;
     }
 
     public void insertAt(int position, int data){
-        Node node = new Node(data);
-        Node temp = head;
+        StackNode node = new StackNode(data);
+        StackNode temp = head;
         for(int i=0; i<position-1; i++){
             temp = temp.next; // First getting the position -1 node for update ref
         }
@@ -53,13 +53,13 @@ class LinkedList{
     public void deleteAt(int position){
         if(position == 0){
           System.out.println("Delete at begining");
-          Node temp = head; // Getting head
+          StackNode temp = head; // Getting head
           head = head.next; // Setting head as next element of head so it will delete 1st entry
           temp.next = null;
         }
         else if(position == -1){
             System.out.println("Delete at end");
-            Node temp = head;
+            StackNode temp = head;
             while (temp.next!=tail){ // Iterate until pointer reaches previous node of tail node
                 temp = temp.next; // get the last before node
             }
@@ -67,7 +67,7 @@ class LinkedList{
             tail = temp; // set 2nd last node as tail
         } else{
             System.out.println("Deleted at position : " + position);
-            Node temp = head;
+            StackNode temp = head;
             for(int i=0; i<position-1; i++){
                 temp = temp.next; // Reaches the previous node of position node
             }
