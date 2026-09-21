@@ -1,3 +1,5 @@
+package com.rajamohan.base;
+
 class CircularQueue{
     int a[] = new int[5];
     int front = -1;

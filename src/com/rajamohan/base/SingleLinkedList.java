@@ -1,3 +1,5 @@
+package com.rajamohan.base;
+
 class Node{
     int data;
     StackNode next;
@@ -21,7 +23,6 @@ class LinkedList{
     }
 
     public void display(){
-
         if(head == null){
             System.out.println("List empty");
         }

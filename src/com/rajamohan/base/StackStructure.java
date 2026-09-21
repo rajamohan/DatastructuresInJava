@@ -1,20 +1,19 @@
+package com.rajamohan.base;
+
 class Stack{
     int a[] = new int[5];
     int top = -1;
 
     public void push(int data){
-
         if(top == a.length -1){
             System.out.println("Stack is full..");
         } else{
             top++;
             a[top] = data;
         }
-
     }
 
     public void pop(){
-
         if(top == -1){
             System.out.println("Stack is empty..");
         } else {
@@ -29,7 +28,6 @@ class Stack{
         } else {
             System.out.println("Peek element : " + a[top]);
         }
-
     }
 
     public void display(){
@@ -37,9 +35,7 @@ class Stack{
             System.out.println(a[i]);
         }
     }
-
 }
-
 
 public class StackStructure {
     public  static  void main(String args[]){

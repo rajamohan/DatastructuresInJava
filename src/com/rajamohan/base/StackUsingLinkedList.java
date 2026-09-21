@@ -1,3 +1,5 @@
+package com.rajamohan.base;
+
 class StackNode {
     int data;
     StackNode next;
@@ -7,9 +9,7 @@ class StackNode {
 }
 
 class MyStack{
-
     StackNode top;
-
     public void push(int data){
         StackNode sn = new StackNode(data);
         if(top == null){ // First element
@@ -49,27 +49,25 @@ class MyStack{
 
 }
 public class StackUsingLinkedList {
-
     public static void main(String args[]){
-         MyStack stack = new MyStack();
-         stack.push(10);
-         stack.push(20);
-         stack.push(30);
-         stack.push(40);
 
+        MyStack stack = new MyStack();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
          stack.display();
+         stack.peek();
+         stack.pop();
 
          stack.peek();
          stack.pop();
 
-        stack.peek();
-        stack.pop();
+         stack.peek();
+         stack.pop();
 
-        stack.peek();
-        stack.pop();
-
-        stack.pop();
-        stack.pop();
-        stack.pop();
+         stack.pop();
+         stack.pop();
+         stack.pop();
     }
 }

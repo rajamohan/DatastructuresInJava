@@ -1,3 +1,5 @@
+package com.rajamohan.base;
+
 class QueueNode{ // This is the actual class which will create queue DS
     int data;
     QueueNode next;
